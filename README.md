@@ -12,8 +12,7 @@ import bcrypt
 print bcrypt.gensalt(10)
 ```
 
-Using the script
-_____
+###Using the script
 
 Run the following command:
 ```
