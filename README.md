@@ -22,3 +22,11 @@ pserve production.ini
 You will be able to visit the site at http://0.0.0.0:6543/
 
 You can change this port in production.ini
+
+
+###Logins
+You can log into the admin panel by logging in with:
+username: administrator
+password: adminpassword
+
+Visitng the URL /admin will show you a searchable list of all users
