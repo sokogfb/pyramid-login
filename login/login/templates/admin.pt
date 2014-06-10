@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ashish Pandhi">
+    <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.0/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/plug-ins/be7019ee387/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <title>Pyramid Login</title>
+
+    <!--[if lt IE 9]>
+      <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="//oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="jumbotron">
+          <h1>Welcome, ${username}</h1>
+          <p class="lead">
+            This is a quick Pyramid Login Script
+          </p>
+          <div>
+            <a href="/logout" class="btn btn-primary btn-lg">Logout</a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <table id="admin-table" class="table">
+          <thead>
+            <tr>
+              <th>User ID</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr tal:repeat="user users">
+              <th>
+                ${user[0]}
+              </th>            
+              <th>
+                ${user[1]}
+              </th>
+            </tr> 
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.0/js/jquery.dataTables.js"></script>
+    <script src="//cdn.datatables.net/plug-ins/be7019ee387/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+    <script src="/static/table.js"></script>
+  </body>
+</html>
